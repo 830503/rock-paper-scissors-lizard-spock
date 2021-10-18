@@ -37,6 +37,7 @@ header > h1 {
     background: coral;
     padding:2px 10px;
     font-size: 20px;
+    border-radius: 5px;
 }
 
 #user-label {
@@ -51,21 +52,36 @@ header > h1 {
     right: -75px;
 }
 
+.reset-container {
+    height:50px;
+    position: relative;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid black;
+    border-radius: 5px;
+    text-align: center;
+    background: coral; 
+    color: white;
+    font-size: 20px;
+}
+
 .result > h1 {
+    margin-top: 50px;
     color: white;
     font-size: 50px;
     text-align: center;
 }
 
-.computer-choice > h3 {
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    margin-top: 30px;
-}
-
 .choices {
-    margin-top: 100px;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -105,3 +121,4 @@ p {
     cursor: pointer;
     background: crimson;
 }
+

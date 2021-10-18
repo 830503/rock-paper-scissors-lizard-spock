@@ -4,10 +4,9 @@ const userScoreDisplay = document.getElementById("user-score");
 const computerScoreDisplay = document.getElementById("computer-score");
 const scoreBoard = document.querySelector(".score-board");
 
-const computerChoiceDisplay = document.getElementById("computer-choice");
-const userChoiceDisplay = document.getElementById("user-choice");
 const resultDispaly = document.getElementById("result");
 
+const reset = document.getElementById("reset");
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
@@ -15,10 +14,7 @@ const lizard = document.getElementById("lizard");
 const spock = document.getElementById("spock");
 const random = document.getElementById("random");
 
-/*let userChoice;
-let randomChoice;
-let computerChoice;
-let result;*/
+
 function getComputerChoice(){
     const choices = ["rock", "paper", "scissors", "lizard ", "spock"];
     const randomNumber = Math.floor(Math.random() * 5); 
@@ -65,7 +61,7 @@ function game(userChoice){
         case "paperspock":
         case "spockrock":
         case "rockscissors":
-           win(userChoice, computerChoice);
+            win(userChoice, computerChoice);
             break;
         case "paperscissors":
         case "rockpaper":
@@ -103,7 +99,7 @@ function gameRandom(){
         case "paperspock":
         case "spockrock":
         case "rockscissors":
-           win(randomChoice, computerChoice);
+            win(randomChoice, computerChoice);
             break;
         case "paperscissors":
         case "rockpaper":
@@ -153,6 +149,12 @@ function main(){
          gameRandom("");
           
       })
+
+      reset.addEventListener("click", function(){
+        window.location.reload("Refresh");
+         
+     })
+
 }
 main(); 
 
