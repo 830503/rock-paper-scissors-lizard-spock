@@ -13,7 +13,8 @@ const scissors = document.getElementById("scissors");
 const lizard = document.getElementById("lizard");
 const spock = document.getElementById("spock");
 const random = document.getElementById("random");
-
+const goButton = document.getElementById("run");
+const userInput = document.getElementById("user-input");
 
 function getComputerChoice(){
     const choices = ["rock", "paper", "scissors", "lizard ", "spock"];
@@ -153,6 +154,18 @@ function main(){
       reset.addEventListener("click", function(){
         window.location.reload("Refresh");
          
+     })
+
+     goButton.addEventListener("click", function(){
+         userChoice = userInput.value;
+         game(userChoice);
+     })
+
+     userInput.addEventListener("keypress", function(e){
+         if(e.key === "Enter"){
+             userChoice = userInput.value;
+         }
+         game(userChoice);
      })
 
 }

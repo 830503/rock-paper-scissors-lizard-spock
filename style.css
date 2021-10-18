@@ -57,7 +57,7 @@ header > h1 {
     position: relative;
 }
 
-button {
+.reset {
     width: 100px;
     height: 40px;
     margin: 0;
@@ -99,6 +99,7 @@ button {
 }
 
 p {
+    margin-top: 20px;
     color: white;
     font-size: 30px;
     text-align: center;
@@ -122,3 +123,24 @@ p {
     background: crimson;
 }
 
+.target {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.user-input {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 25px;
+}
+
+.run {
+    background: coral;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 25px;
+}
