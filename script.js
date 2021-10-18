@@ -1,5 +1,5 @@
-const userScore = 0;
-const computerScore = 0;
+var userScore = 0;
+var computerScore = 0;
 const userScoreDisplay = document.getElementById("user-score");
 const computerScoreDisplay = document.getElementById("computer-score");
 const scoreBoard = document.querySelector(".score-board");
@@ -33,6 +33,24 @@ function getRandomChoice(){
 }
 getRandomChoice();
 
+function win(){
+    userScore++;
+    userScoreDisplay.innerHTML = userScore;
+    computerScoreDisplay.innerHTML = computerScore;
+    resultDispaly.innerHTML = "You win!"
+}
+
+function loss(){
+    computerScore++;
+    computerScoreDisplay.innerHTML = computerScore;
+    userScoreDisplay.innerHTML = userScore;
+    resultDispaly.innerHTML = "You loss!"
+}
+
+function draw(){
+    resultDispaly.innerHTML = "Its a draw!"
+}
+
 
 function game(userChoice){
     const computerChoice = getComputerChoice();
@@ -47,7 +65,7 @@ function game(userChoice){
         case "paperspock":
         case "spockrock":
         case "rockscissors":
-           resultDispaly.innerHTML = "You win!";
+           win(userChoice, computerChoice);
             break;
         case "paperscissors":
         case "rockpaper":
@@ -59,14 +77,14 @@ function game(userChoice){
         case "spockpaper":
         case "rockspock":
         case "scissorsrock":  
-            resultDispaly.innerHTML = "You loss!";
+            loss(userChoice, computerChoice);
             break;
         case "paperpaper":
         case "rockrock":
         case "lizardlizard":
         case "spockpock":
         case "scissorsscissors":
-            resultDispaly.innerHTML = "Its a draw!";
+            draw(userChoice, computerChoice);
             break;
     }
 }
@@ -85,7 +103,7 @@ function gameRandom(){
         case "paperspock":
         case "spockrock":
         case "rockscissors":
-           resultDispaly.innerHTML = "You win!";
+           win(randomChoice, computerChoice);
             break;
         case "paperscissors":
         case "rockpaper":
@@ -97,14 +115,14 @@ function gameRandom(){
         case "spockpaper":
         case "rockspock":
         case "scissorsrock":  
-            resultDispaly.innerHTML = "You loss!";
+            loss(randomChoice, computerChoice);
             break;
         case "paperpaper":
         case "rockrock":
         case "lizardlizard":
         case "spockpock":
         case "scissorsscissors":
-            resultDispaly.innerHTML = "Its a draw!";
+            draw(randomChoice, computerChoice);
             break;
     }
 }
